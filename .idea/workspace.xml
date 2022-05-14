@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Motobike.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Akara-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Honda-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Suzuki-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Yamaha-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/arrow-icon-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Honda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Motorbike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Suzuki.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Yamaha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
+    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="Implement some mainForm">
+      <change afterPath="$PROJECT_DIR$/src/controller/MainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image/Honda-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/Honda-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image/Suzuki-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/Suzuki-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image/Yamaha-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/image/Yamaha-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image/arrow-icon-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "editor.preferences.tabs"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hacker168\IdeaProjects\Motobike\src\image" />
@@ -83,8 +72,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652340672080</updated>
-      <workItem from="1652340673673" duration="13398000" />
+      <workItem from="1652340673673" duration="14303000" />
+      <workItem from="1652505799540" duration="8518000" />
     </task>
+    <task id="LOCAL-00001" summary="Implement some mainForm">
+      <created>1652363403671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652363403671</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implement some mainForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement some mainForm" />
   </component>
 </project>
