@@ -14,7 +14,7 @@ public abstract class Motorbike {
 
     //display method
     public void display(){
-        System.out.println("Brand: " + model);
+        System.out.println("Brand: " + brand);
         System.out.println("ID: " + id);
         System.out.println("Model: " + model);
         System.out.println("Year: " + year);
