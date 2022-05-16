@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="Done for mainForm">
-      <change afterPath="$PROJECT_DIR$/src/controller/ObjectPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MotorbikeForm.java" afterDir="false" />
+    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="Done motorbike drawing!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/MainFormController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Motorbike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652340672080</updated>
       <workItem from="1652340673673" duration="14303000" />
-      <workItem from="1652505799540" duration="43163000" />
+      <workItem from="1652505799540" duration="45163000" />
     </task>
     <task id="LOCAL-00001" summary="Implement some mainForm">
       <created>1652363403671</created>
@@ -89,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652514641518</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Done motorbike drawing!">
+      <created>1652606869317</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652606869317</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement some mainForm" />
     <MESSAGE value="Done for mainForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done for mainForm" />
+    <MESSAGE value="Done motorbike drawing!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done motorbike drawing!" />
   </component>
 </project>

@@ -110,10 +110,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
 
         // back cover tire
         graphics2D.drawArc(285, (int)(340 + (Math.random() * 5)), 154, 154, -36, 225);
-
-
-        //graphics2D.drawImage(_image, (int)_imagePosition.getX(), (int)_imagePosition.getY(), null);
-
+        
         timer.start();
     }
 
