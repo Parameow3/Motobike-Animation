@@ -8,14 +8,16 @@ import javax.swing.*;
 import java.io.IOException;
 
 public class MotorbikeForm extends JFrame {
-    ObjectPanel objectPanel;
-    MainForm mainForm;
+    private ObjectPanel objectPanel; // object panel
     public MotorbikeForm(MainForm mainForm) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        // create object panel
         objectPanel = new ObjectPanel(mainForm, this);
 
+        // when user click on close window, program will exit
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // add panel to the frame
         add(objectPanel);
         pack();
         setTitle("Motorbike Animation");
@@ -23,6 +25,7 @@ public class MotorbikeForm extends JFrame {
         setResizable(false);
         setVisible(true);
 
+        // set icon for this program
         ImageIcon imageIcon = new ImageIcon("src/image/Akara-logo.jpg");
         setIconImage(imageIcon.getImage());
 

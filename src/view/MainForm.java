@@ -24,23 +24,27 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
     private int index;
 
     public MainForm(){
+        // please choose a model of motorbike
         welcomeMessage = new JLabel();
         welcomeMessage.setText("Choose one model of Motorbike:");
         welcomeMessage.setFont(new Font("Nunito Sans", Font.PLAIN, 32));
         welcomeMessage.setBounds(231, 20, 561, 44);
 
+        // label of Honda label
         hondaModel = new JLabel();
         ImageIcon hondaIcon = new ImageIcon("src/image/Honda-logo.png");
         hondaModel.setBounds(99, 100, 213, 220);
         hondaModel.setIcon(hondaIcon);
         hondaModel.addMouseListener(this);
 
+        // label of Yamaha label
         yamahaModel = new JLabel();
         ImageIcon yamahaIcon = new ImageIcon("src/image/Yamaha-logo.png");
         yamahaModel.setBounds(413, 100, 213, 220);
         yamahaModel.setIcon(yamahaIcon);
         yamahaModel.addMouseListener(this);
 
+        // label of Suzuki label
         suzukiModel = new JLabel();
         ImageIcon suzukiIcon = new ImageIcon("src/image/Suzuki-logo.png");
         suzukiModel.setIcon(suzukiIcon);
@@ -48,12 +52,13 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
         suzukiModel.setHorizontalAlignment(SwingConstants.CENTER);
         suzukiModel.addMouseListener(this);
 
+        // information label of motorbike
         informationLabel = new JLabel();
         informationLabel.setFont(new Font("Nunito Sans", Font.PLAIN, 24));
         informationLabel.setBounds(99, 410, 430, 266);
         informationLabel.setBorder(new RoundedBorder(50));
 
-
+        // next or go button connect to the next frame
         ImageIcon btnIcon = new ImageIcon("src/image/Arrow-right.png");
         goButton = new JButton();
         goButton.setBounds(755, 468, 166, 150);
@@ -72,6 +77,7 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
             }
         });
 
+        // set the item about to the frame
         setLayout(null);
         setTitle("Motorbike Animation");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,38 +99,9 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == goButton) {
-            if (index == 0) {
-                Honda honda = new Honda();
-                honda.setBrand("HONDA");
-                honda.setPrice(2499);
-                honda.setYear(2022);
-                honda.setModel("DREAM");
-                honda.setId(1999888);
-                honda.display();
-            }
-            else if (index == 1) {
-                Yamaha yamaha = new Yamaha();
-                yamaha.setBrand("YAMAHA");
-                yamaha.setPrice(1966);
-                yamaha.setYear(2022);
-                yamaha.setModel("FZ");
-                yamaha.setId(16666999);
-                yamaha.display();
-            }
-            else if (index == 2) {
-                Suzuki suzuki = new Suzuki();
-                suzuki.setBrand("SUZUKI");
-                suzuki.setPrice(2009);
-                suzuki.setYear(2022);
-                suzuki.setModel("VIVA");
-                suzuki.setId(17766661);
-                suzuki.display();
-            }
             try {
                 new MotorbikeForm(this);
-            } catch (UnsupportedAudioFileException ex) {
-                throw new RuntimeException(ex);
-            } catch (IOException | LineUnavailableException ex) {
+            } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             dispose();

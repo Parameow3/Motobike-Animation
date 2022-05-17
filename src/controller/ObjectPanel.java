@@ -22,24 +22,25 @@ public class ObjectPanel extends JPanel implements ActionListener {
     private double x1 = 25.0; /////////// x1 for road animation
     private double x2 = 1000.0; ///////// x2 for road animation
     private float[] dashPattern = {10f,2f}; // dash pattern line
-    private Image staticSakura; ///////////////////// Image star in the sky
-    private Image sakura;
+    private Image staticSakura; ///////////////////// Image static sakura
+    private Image sakura;   ///////////////////// Image sakura along the road
     private Image logo;  //////////////////// logo of motorbike brands
     private double xS1 = 1024.0; //////////////// x for sakura position
     private double velocity = 0; //////////////// velocity for this animation move
     private double space; /////////////////// space between stars
     Timer timer = new Timer(1, this); // animation delay
     private MainForm mainForm; ////////// mainForm for object
-    private MotorbikeForm motorbikeForm;
+    private MotorbikeForm motorbikeForm; // call object
     private JLabel messageLabel;
+    // call model objects
     private Honda honda = new Honda();
     private Yamaha yamaha = new Yamaha();
     private Suzuki suzuki = new Suzuki();
-    private int fontSizeMessage = 22;
-    private Clip clip;
-    private JCheckBox musicCheckBox;
-    private ImageIcon playedMusic;
-    private ImageIcon stopMusic;
+    private int fontSizeMessage = 22; // dynamic fontsize
+    private Clip clip; // Clip object for play music file .wav
+    private JCheckBox musicCheckBox; // music on and off
+    private ImageIcon playedMusic;  // icon confirm that music played
+    private ImageIcon stopMusic;    // icon confirm that music stopped
     private boolean music = true;
 
     public ObjectPanel(MainForm mainForm, MotorbikeForm motorbikeForm) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
@@ -97,6 +98,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         startButton.addActionListener(this);
         add(startButton);
 
+        // stop button
         stopButton = new JButton();
         stopButton.setText("Stop");
         stopButton.setFont(new Font("Nunito Sans", Font.PLAIN, 22));
@@ -108,6 +110,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         stopButton.addActionListener(this);
         add(stopButton);
 
+        // message show that motor is start or stop
         messageLabel = new JLabel();
         messageLabel.setFont(new Font("Nunito Sans", Font.PLAIN, fontSizeMessage));
         messageLabel.setBounds(333, 614, 350, 90);
@@ -115,6 +118,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         messageLabel.setForeground(Color.darkGray);
         add(messageLabel);
 
+        // play romantic music
         playedMusic = new ImageIcon("src/image/music.png");
         stopMusic = new ImageIcon("src/image/musicOff.png");
         musicCheckBox = new JCheckBox();
@@ -141,6 +145,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         add(musicCheckBox);
     }
 
+    // paint function
     public void paintComponent(Graphics g){
 
         super.paintComponent(g);
@@ -228,6 +233,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         graphics2D.drawArc(285, (int)(340 + (Math.random() * 5)), 154, 154, -36, 225);
     }
 
+    // for animation
     @Override
     public void actionPerformed(ActionEvent e) {
         if (x2 == 9500){
@@ -279,6 +285,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         }
     }
 
+    // rounded border method
     private record RoundedBorder(int radius) implements Border {
         public Insets getBorderInsets(Component c) {
             return new Insets(this.radius + 1, this.radius + 1, this.radius + 2, this.radius);
