@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/image/music.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/musicOff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/music/Weathering-With-You.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ObjectPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ObjectPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MotorbikeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MotorbikeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +77,7 @@
       <updated>1652340672080</updated>
       <workItem from="1652340673673" duration="14303000" />
       <workItem from="1652505799540" duration="43163000" />
-      <workItem from="1652772642586" duration="14326000" />
+      <workItem from="1652772642586" duration="15998000" />
     </task>
     <task id="LOCAL-00001" summary="Implement some mainForm">
       <created>1652363403671</created>
@@ -112,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652783601262</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add romantic music">
+      <created>1652787467358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652787467358</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +137,7 @@
     <MESSAGE value="Done for mainForm" />
     <MESSAGE value="add go logo brand to motorbike" />
     <MESSAGE value="modify animation view" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify animation view" />
+    <MESSAGE value="add romantic music" />
+    <option name="LAST_COMMIT_MESSAGE" value="add romantic music" />
   </component>
 </project>
