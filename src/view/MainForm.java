@@ -118,7 +118,7 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
                 suzuki.setId(17766661);
                 suzuki.display();
             }
-            new MotorbikeForm();
+            new MotorbikeForm(this);
             dispose();
         }
     }

@@ -1,5 +1,8 @@
 package controller;
 
+import model.Motorbike;
+import view.MainForm;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,10 +16,12 @@ public class ObjectPanel extends JPanel implements ActionListener {
     int x2 = 1000, velX2 = 2;
     float[] dashPattern = {10f,2f};
     Image stars;
+    Image logo;
     int xS1 = 1024;
     int yS1 = 150;
     int xSVel = 2;
     int i;
+    MainForm mainForm;
 
     // for motorbike
     //Wheel
@@ -24,10 +29,18 @@ public class ObjectPanel extends JPanel implements ActionListener {
 
 
 
-    public ObjectPanel() {
+    public ObjectPanel(MainForm mainForm) {
+        this.mainForm = mainForm;
         setPreferredSize(new Dimension(1024, 768));
         setBackground(Color.DARK_GRAY);
         stars = new ImageIcon("src/image/star.png").getImage();
+
+        // set motorbike logo
+        switch (mainForm.getIndex()) {
+            case 0 -> logo = new ImageIcon("src/image/Honda-logo - OnMotorBike.png").getImage();
+            case 1 -> logo = new ImageIcon("src/image/Yamaha-logo - OnMotorBike.png").getImage();
+            case 2 -> logo = new ImageIcon("src/image/Suzuki-logo - OnMotorBike.png").getImage();
+        }
     }
 
     public void paintComponent(Graphics g){
@@ -107,6 +120,9 @@ public class ObjectPanel extends JPanel implements ActionListener {
         bodyMotor.curveTo(382, (int)(332 + (Math.random() * 5)), 332, (int)(332 + (Math.random() * 5)),
                 282, (int)(385 + (Math.random() * 5)));
         graphics2D.draw(bodyMotor);
+
+        //under the seat
+        graphics2D.drawImage(logo, 470, (int)(360+ (Math.random() * 5)), null);
 
         // back cover tire
         graphics2D.drawArc(285, (int)(340 + (Math.random() * 5)), 154, 154, -36, 225);

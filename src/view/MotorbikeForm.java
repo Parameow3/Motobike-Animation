@@ -6,9 +6,10 @@ import javax.swing.*;
 
 public class MotorbikeForm extends JFrame {
     ObjectPanel objectPanel;
-    public MotorbikeForm(){
+    MainForm mainForm;
+    public MotorbikeForm(MainForm mainForm){
 
-        objectPanel = new ObjectPanel();
+        objectPanel = new ObjectPanel(mainForm);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
