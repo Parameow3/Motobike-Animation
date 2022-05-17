@@ -6,14 +6,14 @@ import model.Yamaha;
 import view.MainForm;
 import view.MotorbikeForm;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.geom.Path2D;
+import java.io.File;
+import java.io.IOException;
 
 public class ObjectPanel extends JPanel implements ActionListener {
     private JButton backButton;
@@ -36,10 +36,19 @@ public class ObjectPanel extends JPanel implements ActionListener {
     private Yamaha yamaha = new Yamaha();
     private Suzuki suzuki = new Suzuki();
     private int fontSizeMessage = 22;
+    private Clip clip;
+    private JCheckBox musicCheckBox;
+    private ImageIcon playedMusic;
+    private ImageIcon stopMusic;
+    private boolean music = true;
 
-    public ObjectPanel(MainForm mainForm, MotorbikeForm motorbikeForm) {
+    public ObjectPanel(MainForm mainForm, MotorbikeForm motorbikeForm) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         this.mainForm = mainForm;
         this.motorbikeForm = motorbikeForm;
+        File file = new File("src/music/Weathering-With-You.wav");
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
+        clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
 
         // set panel preference
         setPreferredSize(new Dimension(1024, 768));
@@ -62,6 +71,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         backButton.addActionListener(this);
         backButton.setIcon(btnIcon);
         backButton.setFocusable(false);
+        backButton.setBackground(null);
         backButton.setBorder(new RoundedBorder(15));
         backButton.addMouseListener(new MouseAdapter() {
             public void mouseEntered(MouseEvent evt) {
@@ -104,6 +114,31 @@ public class ObjectPanel extends JPanel implements ActionListener {
         messageLabel.setBorder(new RoundedBorder(25));
         messageLabel.setForeground(Color.darkGray);
         add(messageLabel);
+
+        playedMusic = new ImageIcon("src/image/music.png");
+        stopMusic = new ImageIcon("src/image/musicOff.png");
+        musicCheckBox = new JCheckBox();
+        musicCheckBox.setBounds(850, 500, 100, 100);
+        musicCheckBox.setForeground(Color.pink);
+        musicCheckBox.setBackground(null);
+        musicCheckBox.setFocusable(false);
+        musicCheckBox.setSelected(true);
+        musicCheckBox.setSelectedIcon(playedMusic);
+        musicCheckBox.setIcon(stopMusic);
+        musicCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == ItemEvent.SELECTED) {
+                    music = true;
+                    clip.start();
+                }
+                else {
+                    music = false;
+                    clip.stop();
+                }
+            }
+        });
+        add(musicCheckBox);
     }
 
     public void paintComponent(Graphics g){
@@ -195,7 +230,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (x2 == 6500){
+        if (x2 == 9500){
             x2 = 1024;
             x1 = -50;
             xS1 = 1024;
@@ -219,6 +254,8 @@ public class ObjectPanel extends JPanel implements ActionListener {
             while (velocity != 2) {
                 velocity += 0.5;
             }
+            if (music)
+                clip.start();
         }
 
         if (e.getSource() == stopButton) {
@@ -231,10 +268,12 @@ public class ObjectPanel extends JPanel implements ActionListener {
             while (velocity != 0) {
                 velocity -= 0.5;
             }
+            clip.stop();
             timer.stop();
         }
 
         if (e.getSource() == backButton) {
+            clip.stop();
             new MainForm();
             motorbikeForm.dispose();
         }

@@ -5,10 +5,13 @@ import model.Motorbike;
 import model.Suzuki;
 import model.Yamaha;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 
 public class MainForm extends JFrame implements ActionListener, MouseListener{
@@ -48,7 +51,7 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
         informationLabel = new JLabel();
         informationLabel.setFont(new Font("Nunito Sans", Font.PLAIN, 24));
         informationLabel.setBounds(99, 410, 430, 266);
-        informationLabel.setBorder(BorderFactory.createLineBorder(Color.GRAY,2));
+        informationLabel.setBorder(new RoundedBorder(50));
 
 
         ImageIcon btnIcon = new ImageIcon("src/image/Arrow-right.png");
@@ -117,7 +120,13 @@ public class MainForm extends JFrame implements ActionListener, MouseListener{
                 suzuki.setId(17766661);
                 suzuki.display();
             }
-            new MotorbikeForm(this);
+            try {
+                new MotorbikeForm(this);
+            } catch (UnsupportedAudioFileException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException | LineUnavailableException ex) {
+                throw new RuntimeException(ex);
+            }
             dispose();
         }
     }
