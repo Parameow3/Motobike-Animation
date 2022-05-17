@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="Done for mainForm">
-      <change afterPath="$PROJECT_DIR$/src/image/Honda-logo - OnMotorBike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Suzuki-logo - OnMotorBike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/Yamaha-logo - OnMotorBike.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ObjectPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ObjectPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MotorbikeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MotorbikeForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652514641518</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add go logo brand to motorbike">
+      <created>1652754935632</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652754935632</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +114,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Implement some mainForm" />
     <MESSAGE value="Done for mainForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done for mainForm" />
+    <MESSAGE value="add go logo brand to motorbike" />
+    <option name="LAST_COMMIT_MESSAGE" value="add go logo brand to motorbike" />
   </component>
 </project>
