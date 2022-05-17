@@ -9,7 +9,7 @@ public class MotorbikeForm extends JFrame {
     MainForm mainForm;
     public MotorbikeForm(MainForm mainForm){
 
-        objectPanel = new ObjectPanel(mainForm);
+        objectPanel = new ObjectPanel(mainForm, this);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -19,7 +19,11 @@ public class MotorbikeForm extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
+
         ImageIcon imageIcon = new ImageIcon("src/image/Akara-logo.jpg");
         setIconImage(imageIcon.getImage());
+
+
+
     }
 }

@@ -13,7 +13,6 @@ import java.awt.event.*;
 
 public class MainForm extends JFrame implements ActionListener, MouseListener{
     private JButton goButton;
-    private JPanel mainPanel;
     private JLabel welcomeMessage;
     private JLabel hondaModel;
     private JLabel yamahaModel;

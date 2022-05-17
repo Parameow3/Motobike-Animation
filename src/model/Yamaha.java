@@ -2,17 +2,17 @@ package model;
 
 public class Yamaha extends Motorbike{
     @Override
-    public void startEngine() {
-
+    public String startEngine() {
+        return "Motor Yamaha Started!";
     }
 
     @Override
-    public void stopEngine() {
-
+    public String stopEngine() {
+        return "Motor Yamaha Stopped!";
     }
 
     @Override
-    public void drive() {
-
+    public String drive() {
+        return "Motor Yamaha is Driving...";
     }
 }

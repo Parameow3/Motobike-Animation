@@ -1,7 +1,5 @@
 import view.MainForm;
-import model.Honda;
-import model.Suzuki;
-import model.Yamaha;
+
 
 
 public class main{

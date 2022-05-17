@@ -2,17 +2,17 @@ package model;
 
 public class Suzuki extends Motorbike{
     @Override
-    public void startEngine() {
-
+    public String startEngine() {
+        return "Motor Suzuki Started!";
     }
 
     @Override
-    public void stopEngine() {
-
+    public String stopEngine() {
+        return "Motor Suzuki Stopped!";
     }
 
     @Override
-    public void drive() {
-
+    public String drive() {
+        return "Motor Suzuki is Driving...";
     }
 }

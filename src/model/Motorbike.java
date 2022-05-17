@@ -8,9 +8,9 @@ public abstract class Motorbike {
     private String model;
 
     // abstract method
-    public abstract void startEngine();
-    public abstract void stopEngine();
-    public abstract void drive();
+    public abstract String startEngine();
+    public abstract String stopEngine();
+    public abstract String drive();
 
     //display method
     public void display(){

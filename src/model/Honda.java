@@ -2,18 +2,18 @@ package model;
 
 public class Honda extends Motorbike{
     @Override
-    public void startEngine() {
-
+    public String startEngine() {
+        return "Motor Honda Started!";
     }
 
     @Override
-    public void stopEngine() {
-
+    public String stopEngine() {
+        return "Motor Honda Stopped!";
     }
 
     @Override
-    public void drive() {
-
+    public String drive() {
+        return "Motor Honda is Driving...";
     }
 
 }
