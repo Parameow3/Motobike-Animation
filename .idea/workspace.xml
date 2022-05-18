@@ -4,7 +4,6 @@
     <list default="true" id="bbe8ff34-6923-4be0-a910-3c8444eceb06" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ObjectPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ObjectPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,8 @@
       <workItem from="1652340673673" duration="14303000" />
       <workItem from="1652505799540" duration="43163000" />
       <workItem from="1652772642586" duration="16043000" />
-      <workItem from="1652791168654" duration="4571000" />
+      <workItem from="1652791168654" duration="5167000" />
+      <workItem from="1652840066601" duration="2036000" />
     </task>
     <task id="LOCAL-00001" summary="Implement some mainForm">
       <created>1652363403671</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652789146412</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add some comments">
+      <created>1652800188929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652800188929</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +155,7 @@
     <MESSAGE value="modify animation view" />
     <MESSAGE value="add romantic music" />
     <MESSAGE value="modify README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify README.md" />
+    <MESSAGE value="add some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some comments" />
   </component>
 </project>

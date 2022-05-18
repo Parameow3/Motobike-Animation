@@ -42,6 +42,10 @@ public class ObjectPanel extends JPanel implements ActionListener {
     private ImageIcon playedMusic;  // icon confirm that music played
     private ImageIcon stopMusic;    // icon confirm that music stopped
     private boolean music = true;
+    private Timer timerSpeed;
+    private int gear = 0;
+    private String gearParameter;
+    private int rand = 0;
 
     public ObjectPanel(MainForm mainForm, MotorbikeForm motorbikeForm) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         this.mainForm = mainForm;
@@ -112,11 +116,36 @@ public class ObjectPanel extends JPanel implements ActionListener {
 
         // message show that motor is start or stop
         messageLabel = new JLabel();
-        messageLabel.setFont(new Font("Nunito Sans", Font.PLAIN, fontSizeMessage));
+        messageLabel.setFont(new Font("Nunito Sans", Font.PLAIN, 50));
+        messageLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        messageLabel.setVerticalAlignment(SwingConstants.CENTER);
         messageLabel.setBounds(333, 614, 350, 90);
         messageLabel.setBorder(new RoundedBorder(25));
         messageLabel.setForeground(Color.darkGray);
+        messageLabel.setOpaque(true);
+        messageLabel.setBackground(null);
+        messageLabel.setLayout(null);
         add(messageLabel);
+        timerSpeed = new Timer(50, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    if (gear >= 0 && gear <= 125) {
+                        rand = -8;
+                        gear += (5 + (Math.random() * rand));
+                    }
+                    else if (gear > 125 && gear <= 150){
+                        rand = -9;
+                        gear += (5 + (Math.random() * rand));
+                    }
+                    else {
+                        rand = -10;
+                        gear += (5 + (Math.random() * rand));
+                    }
+
+                    gearParameter = String.format("%03d", gear);
+                    messageLabel.setText(gearParameter + "Km/h");
+            }
+        });
 
         // play romantic music
         playedMusic = new ImageIcon("src/image/music.png");
@@ -250,13 +279,8 @@ public class ObjectPanel extends JPanel implements ActionListener {
         repaint();
 
         if (e.getSource() == startButton) {
-            fontSizeMessage = 23;
-            switch (mainForm.getIndex()) {
-                case 0 -> messageLabel.setText("<html>" + honda.startEngine() + "<br>" + honda.drive() + "</html>");
-                case 1 -> messageLabel.setText("<html>" + yamaha.startEngine() + "<br>" + yamaha.drive() + "</html>");
-                case 2 -> messageLabel.setText("<html>" + suzuki.startEngine()+ "<br>" + suzuki.drive() + "</html>");
-            }
             timer.start();
+            timerSpeed.start();
             while (velocity != 2) {
                 velocity += 0.5;
             }
@@ -265,12 +289,6 @@ public class ObjectPanel extends JPanel implements ActionListener {
         }
 
         if (e.getSource() == stopButton) {
-            fontSizeMessage = 55;
-            switch (mainForm.getIndex()) {
-                case 0 -> messageLabel.setText(honda.stopEngine());
-                case 1 -> messageLabel.setText(yamaha.stopEngine());
-                case 2 -> messageLabel.setText(suzuki.stopEngine());
-            }
             while (velocity != 0) {
                 velocity -= 0.5;
             }
