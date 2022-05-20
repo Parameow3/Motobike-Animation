@@ -79,7 +79,8 @@
       <workItem from="1652505799540" duration="43163000" />
       <workItem from="1652772642586" duration="16043000" />
       <workItem from="1652791168654" duration="5167000" />
-      <workItem from="1652840066601" duration="2036000" />
+      <workItem from="1652840066601" duration="4941000" />
+      <workItem from="1652924851328" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="Implement some mainForm">
       <created>1652363403671</created>
@@ -130,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652800188929</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update messageLabel to gasMeter Km/h">
+      <created>1652842277585</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652842277585</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +164,7 @@
     <MESSAGE value="add romantic music" />
     <MESSAGE value="modify README.md" />
     <MESSAGE value="add some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some comments" />
+    <MESSAGE value="update messageLabel to gasMeter Km/h" />
+    <option name="LAST_COMMIT_MESSAGE" value="update messageLabel to gasMeter Km/h" />
   </component>
 </project>

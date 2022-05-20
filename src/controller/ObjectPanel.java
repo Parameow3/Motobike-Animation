@@ -28,7 +28,8 @@ public class ObjectPanel extends JPanel implements ActionListener {
     private double xS1 = 1024.0; //////////////// x for sakura position
     private double velocity = 0; //////////////// velocity for this animation move
     private double space; /////////////////// space between stars
-    Timer timer = new Timer(1, this); // animation delay
+    private int delayTimer = 1;
+    Timer timer = new Timer(delayTimer, this); // animation delay
     private MainForm mainForm; ////////// mainForm for object
     private MotorbikeForm motorbikeForm; // call object
     private JLabel messageLabel;
@@ -126,7 +127,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         messageLabel.setBackground(null);
         messageLabel.setLayout(null);
         add(messageLabel);
-        timerSpeed = new Timer(50, new ActionListener() {
+        timerSpeed = new Timer(15, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                     if (gear >= 0 && gear <= 125) {
@@ -143,7 +144,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
                     }
 
                     gearParameter = String.format("%03d", gear);
-                    messageLabel.setText(gearParameter + "Km/h");
+                    messageLabel.setText(gearParameter + " Km/h");
             }
         });
 
@@ -279,6 +280,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         repaint();
 
         if (e.getSource() == startButton) {
+            delayTimer = 1;
             timer.start();
             timerSpeed.start();
             while (velocity != 2) {
@@ -289,9 +291,14 @@ public class ObjectPanel extends JPanel implements ActionListener {
         }
 
         if (e.getSource() == stopButton) {
+            delayTimer = 1000;
             while (velocity != 0) {
                 velocity -= 0.5;
             }
+            timerSpeed.stop();
+            gearParameter = String.format("%03d", 0);
+            messageLabel.setText(gearParameter + " Km/h");
+
             clip.stop();
             timer.stop();
         }
