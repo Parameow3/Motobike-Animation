@@ -62,6 +62,7 @@ public class ObjectPanel extends JPanel implements ActionListener {
         staticSakura = new ImageIcon("src/image/sakura-static.png").getImage();
         sakura = new ImageIcon("src/image/sakura.png").getImage();
         setLayout(null);
+        // hello
 
         // set motorbike logo
         switch (mainForm.getIndex()) {
